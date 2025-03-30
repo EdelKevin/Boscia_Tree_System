@@ -1,0 +1,19 @@
+import numpy as np
+
+car_speed = [0.4,0.8,0.1,2.0,2.3,2.6,2.9,5.0]
+
+def average_filter(speed):
+
+    size = len(speed)
+    filtered_data = [0] * (size-1)
+    for i in range(size-1):
+        filtered_data[i] = (speed[i]+speed[i+1])/2
+    filtered_data = [round(x,2) for x in filtered_data]   
+    return filtered_data
+
+filtered_carspeed = average_filter(car_speed)
+
+print(filtered_carspeed)
+
+
+    
