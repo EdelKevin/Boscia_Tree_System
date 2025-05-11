@@ -1,7 +1,9 @@
+
+
 import numpy as np
 
 car_speed = [0.4,0.8,0.1,2.0,2.3,2.6,2.9,5.0]
-
+### This function takes a list of speed values and returns a new list with the average of each pair of adjacent values.
 def average_filter(speed):
 
     size = len(speed)
